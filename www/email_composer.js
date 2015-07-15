@@ -60,6 +60,21 @@ exports.isAvailable = function (callback, scope) {
     exec(fn, null, 'EmailComposer', 'isAvailable', []);
 };
 
+/*  Checks to see if user has an email account setup.
+    Even if they do have an email application,
+    it doesn't mean they have an account setup on it.
+ *
+ * @param {Function} callback
+ *      A callback function to be called with the result
+ * @param {Object} scope
+ *      The scope of the callback
+ */
+exports.isAccountSetup = function(callback, scope) {
+    var fn = this.createCallbackFn(callback, scope);
+    exec(fn, null, 'EmailComposer', 'isAccountSetup', []);
+};
+
+
 /**
  * Displays the email composer pre-filled with data.
  *

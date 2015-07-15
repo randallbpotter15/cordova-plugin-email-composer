@@ -23,6 +23,7 @@
 #import "Cordova/NSData+Base64.h"
 #import "Cordova/CDVAvailability.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+@import MessageUI;
 
 #include "TargetConditionals.h"
 
@@ -54,6 +55,41 @@
 
         [self.commandDelegate sendPluginResult:result
                                     callbackId:command.callbackId];
+    }];
+}
+/**
+ * Tells if the email capability has an email account setup on it.
+ *
+*/
+
+- (boolean) isAccountSetup:() command
+{
+    [self.commandDelegate runInBackground:^{
+        bool result;
+        Class mailClass =(NSClassFromString(@"MFMailComposeViewController"));
+        if(mailClass!=nil)
+        {
+            if ([mailClass canSendMail])
+            {
+               result = TRUE;
+            }else
+            {
+               //email account not setup on the device.
+              result = FALSE;
+            }
+        } else {
+         // problem in loading mail setup.
+         result = NULL;
+        }
+
+        CDVPluginResult* result;
+
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
+                                             messageAsBool:result];
+
+        [self.commandDelegate sendPluginResult:result
+                                    callbackId:command.callbackId];
+
     }];
 }
 

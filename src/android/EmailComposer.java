@@ -89,6 +89,12 @@ public class EmailComposer extends CordovaPlugin {
             return true;
         }
 
+        if ("isAccountSetup".equals(action)) {
+            isAccountSetup();
+
+            return true;
+        }
+
         // Returning false results in a "MethodNotFound" error.
         return false;
     }
@@ -105,6 +111,14 @@ public class EmailComposer extends CordovaPlugin {
                 command.sendPluginResult(result);
             }
         });
+    }
+    /**
+     * Tells if the email capability has an email account setup on it.
+     */
+    private boolean isAccountSetup() {
+        AccountManager am = AccountManager.get(HomeScreen.this);
+        Account[] accounts = am.getAccounts();
+        return accounts.length > 0;
     }
 
     /**
