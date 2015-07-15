@@ -33,6 +33,10 @@ exports.isAvailable = function (success, error, args) {
     success(true);
 };
 
+exports.isAccountSetup = function (success, error, args) {
+    success(true);
+};
+
 /**
  * Displays the email composer pre-filled with data.
  *
