@@ -62,7 +62,7 @@
  *
 */
 
-- (boolean) isAccountSetup:() command
+- (bool) isAccountSetup:() command
 {
     [self.commandDelegate runInBackground:^{
         bool result;
