@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1652125-7e98-4d16-bcb5-b1a23d0b6902" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="d1652125-7e98-4d16-bcb5-b1a23d0b6902" name="Default" comment="" />
     <ignored path="cordova-plugin-email-composer.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -346,12 +344,12 @@
       <changelist id="d1652125-7e98-4d16-bcb5-b1a23d0b6902" name="Default" comment="" />
       <created>1436905517063</created>
       <updated>1436905517063</updated>
-      <workItem from="1436905517826" duration="1954000" />
+      <workItem from="1436905517826" duration="2036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1954000" />
+    <option name="totallyTimeSpent" value="2036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="123" y="23" width="1440" height="839" extended-state="6" />

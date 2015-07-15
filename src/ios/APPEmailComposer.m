@@ -23,7 +23,7 @@
 #import "Cordova/NSData+Base64.h"
 #import "Cordova/CDVAvailability.h"
 #import <MobileCoreServices/MobileCoreServices.h>
-@import MessageUI;
+#import <MessageUI/MessageUI.h>
 
 #include "TargetConditionals.h"
 
